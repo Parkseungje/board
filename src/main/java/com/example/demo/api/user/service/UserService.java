@@ -1,8 +1,7 @@
 package com.example.demo.api.user.service;
 
-import com.example.demo.api.user.entity.Users;
+import com.example.demo.api.user.entity.User;
 
 public interface UserService {
-
-    public Users getUser(String email);
+    public User getUser(String email);
 }
