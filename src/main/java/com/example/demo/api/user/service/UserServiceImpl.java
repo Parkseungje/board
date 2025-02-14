@@ -1,6 +1,6 @@
 package com.example.demo.api.user.service;
 
-import com.example.demo.api.user.entity.Users;
+import com.example.demo.api.user.entity.User;
 import com.example.demo.api.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public Users getUser(String email) {
+    public User getUser(String email) {
         return userRepository.findByEmail(email);
     }
 }

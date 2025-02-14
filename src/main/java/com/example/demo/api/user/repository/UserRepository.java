@@ -1,10 +1,10 @@
 package com.example.demo.api.user.repository;
 
-import com.example.demo.api.user.entity.Users;
+import com.example.demo.api.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<Users, Long> {
-    Users findByEmail(String email);
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByEmail(String email);
 }

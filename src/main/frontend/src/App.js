@@ -1,19 +1,18 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import PostList from "./pages/PostList";
+import PostDetail from "./pages/PostDetail";
 
 function App() {
-  const [hello, setHello] = useState('')
-
-  useEffect(() => {
-    axios.get('/board/hello')
-        .then(response => setHello(response.data))
-        .catch(error => console.log(error))
-  }, []);
-
   return (
-      <div>
-        백엔드에서 가져온 데이터 : {hello}
-      </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/posts" element={<PostList />} />
+        <Route path="/post/:id" element={<PostDetail />} />
+      </Routes>
+    </Router>
   );
 }
 
