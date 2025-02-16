@@ -1,5 +1,6 @@
 package com.example.demo.api.post.service;
 
+import com.example.demo.api.post.dto.PostRequest;
 import com.example.demo.api.post.entity.Post;
 
 import java.util.List;
@@ -10,4 +11,8 @@ public interface PostService {
     List<Post> getPostsListAll();
 
     Optional<Post> getPost(Long postId);
+
+    void createPost(PostRequest post);
+
+    Long deletePost(Long postId);
 }

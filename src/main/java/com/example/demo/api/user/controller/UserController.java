@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/api")
 public class UserController {
@@ -18,7 +20,7 @@ public class UserController {
     }
 
     @GetMapping("/user/{email}") // 특정 유저 검색
-    public User getUser(@PathVariable String email){
+    public Optional<User> getUser(@PathVariable String email){
         return userService.getUser(email);
     }
 
