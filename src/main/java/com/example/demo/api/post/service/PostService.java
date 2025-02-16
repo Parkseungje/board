@@ -14,5 +14,7 @@ public interface PostService {
 
     void createPost(PostRequest post);
 
-    Long deletePost(Long postId);
+    Long deletePostById(Long postId);
+
+    void updatePostById(Long postId, PostRequest postRequest);
 }
